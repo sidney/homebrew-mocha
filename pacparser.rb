@@ -5,8 +5,8 @@ require 'formula'
 
 class Pacparser < Formula
   homepage 'https://code.google.com/p/pacparser/'
-  url 'https://pacparser.googlecode.com/files/pacparser-1.3.0.tar.gz'
-  sha1 'e738378e2522fba83b2ca7082d222b0a479b32b0'
+  url 'https://pacparser.googlecode.com/files/pacparser-1.3.1.tar.gz'
+  sha1 'eeaf890fddc16994d6063efe27a41488fa7f7ed9'
   head 'https://code.google.com/p/pacparser'
 
   depends_on 'python' if build.include? 'with-python'
