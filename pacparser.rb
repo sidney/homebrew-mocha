@@ -1,8 +1,5 @@
 require 'formula'
 
-# Documentation: https://github.com/mxcl/homebrew/wiki/Formula-Cookbook
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-
 class Pacparser < Formula
   homepage 'https://code.google.com/p/pacparser/'
   url 'https://pacparser.googlecode.com/files/pacparser-1.3.1.tar.gz'
@@ -23,11 +20,9 @@ class Pacparser < Formula
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! It's enough to just replace
-    # "false" with the main program this formula installs, but it'd be nice if you
-    # were more thorough. Run the test with `brew test pacparser`.
-    system "false"
+    system "curl -s -S 'http://pastebin.com/raw.php?i=1agYHQqD' | pactester -p - -u 'http://www.yourdomain.com'"
+    if build.include? 'with-python'
+      system "python -c 'import pacparser'"
+    end
   end
 end
